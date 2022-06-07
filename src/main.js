@@ -4,6 +4,8 @@ import store from './store'
 import App from './App.vue'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
+import 'font-awesome/css/font-awesome.min.css';
+import '@/style/index.scss'
 import {http} from '@/common/http'
 
 Vue.use(ElementUI)

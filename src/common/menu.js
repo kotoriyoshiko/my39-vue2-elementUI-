@@ -16,9 +16,9 @@ const router_config=[
     {
         path:'/',
         component:Layout,
-        redirect:{
-            path:'/home'
-        },
+        // redirect:{
+        //     path:'/home'
+        // },
         children:[
             {
                 path: 'home',
