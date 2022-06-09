@@ -16,23 +16,25 @@
       <div class="login nav">
         <el-link>
         <i class="fa fa-user" aria-hidden="true"></i>
-        Login</el-link>
+        <span>Login</span>
+        </el-link>
       </div>
       <div class="lang nav">
         <el-link>
         <i class="fa fa-globe" aria-hidden="true"></i>
-        Language
-        </el-link></div>
+        <span>Language</span>
+        </el-link>
+      </div>
       <div class="search nav">
         <el-link>
         <i class="fa fa-search" aria-hidden="true"></i>
-        Search
+        <span>Search</span>
         </el-link>
       </div>
       <div class="menu nav">
-        <el-link>
+        <el-link @click="menu">
         <i class="fa fa-bars" aria-hidden="true"></i>
-        Menu
+        <span>Menu</span>
         </el-link>
       </div>
     </div>
@@ -50,15 +52,18 @@ export default {
       logo:logoCat,
       logo2:logoCat2
     }
+  },
+  methods:{
+    menu(){
+      this.$router.push({ path: '/menu' });
+    }
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .header-container{
-  border: 1px solid saddlebrown;
-  width: 80%;
-  min-width: 1010px;
+  width: 80vw;
   margin: auto;
 }
 .header-left{
@@ -113,7 +118,7 @@ export default {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   .header-menu{
     display: flex;
     flex-direction: row-reverse;
@@ -124,6 +129,9 @@ export default {
         font-size: 25px;
         margin-left: 30px;
         font-weight: bold;
+        span{
+          padding-left: 10px;
+        }
       }
       .el-link.el-link--default:hover{
         color: #1a3aff;
@@ -136,6 +144,25 @@ export default {
       .nav{
         .el-link.el-link--default{
           font-size: 20px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1270px) {
+      .nav{
+        .el-link.el-link--default{
+          font-size: 20px;
+          margin-left: 5px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1020px) {
+      .nav{
+        .el-link.el-link--default{
+          font-size: 40px;
+          margin-left: 20px;
+          span{
+            display: none;
+          }
         }
       }
     }

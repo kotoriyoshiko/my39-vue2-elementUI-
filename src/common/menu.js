@@ -3,6 +3,7 @@
 //路由懒加载
 function loadView(view_path){
     return ()=>{
+        debugger
         import(
             `@/views/${view_path}.vue`
             )
@@ -10,19 +11,21 @@ function loadView(view_path){
 }
 
 import Layout from "@/layout/index";
+import home from "@/views/home";
+import menus from "@/views/menu";
 
 //配置路由
 const router_config=[
     {
         path:'/',
         component:Layout,
-        // redirect:{
-        //     path:'/home'
-        // },
+        redirect:{
+            path:'/home',
+        },
         children:[
             {
                 path: 'home',
-                component:loadView('home'),
+                component:home,
                 name:'home',
                 meta:{
                     layout:'app-main',
@@ -30,9 +33,9 @@ const router_config=[
                 }
             },
             {
-                path: 'login',
-                component: loadView('login'),
-                name: 'login',
+                path: 'menu',
+                component: menus,
+                name: 'menu',
                 meta: {
                     layout: 'app-main',
                     auth: false,
