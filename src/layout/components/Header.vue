@@ -1,7 +1,7 @@
 <template>
 <el-row class="header-container">
   <el-col :span="12" class="header-left">
-    <div class="logo">
+    <div class="logo" @click="goHome">
       <div class="logo-icon">
         <el-image class="logo-img" fit="fill" :src="logo"  ></el-image>
         <el-image class="logo-img2" fit="fill" :src="logo2"  ></el-image>
@@ -56,6 +56,9 @@ export default {
   methods:{
     menu(){
       this.$router.push({ path: '/menu' });
+    },
+    goHome(){
+      this.$router.push({ path: '/home' });
     }
   }
 }
@@ -111,6 +114,12 @@ export default {
     }
     color: #1a3aff;
   }
+  @media only screen and (max-width: 500px) {
+       .logo-text{
+         font-size: 10px;
+         margin-left: -10px;
+       }
+  }
 }
 
 .header-right{
@@ -118,7 +127,8 @@ export default {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: flex-end;
+  flex-wrap: wrap;
   .header-menu{
     display: flex;
     flex-direction: row-reverse;
