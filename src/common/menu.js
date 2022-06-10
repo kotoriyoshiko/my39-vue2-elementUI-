@@ -13,6 +13,7 @@ function loadView(view_path){
 import Layout from "@/layout/index";
 import home from "@/views/home";
 import menus from "@/views/menu";
+import login from '@/views/login'
 
 //配置路由
 const router_config=[
@@ -60,6 +61,10 @@ const router_config=[
                 },
             }
         ]
+    },
+    {
+        path: '/login',
+        component:login
     }
 ]
 

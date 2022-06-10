@@ -14,7 +14,7 @@
   <el-col :span="12" class="header-right">
     <div class="header-menu">
       <div class="login nav">
-        <el-link>
+        <el-link @click="login">
         <i class="fa fa-user" aria-hidden="true"></i>
         <span>Login</span>
         </el-link>
@@ -59,6 +59,9 @@ export default {
     },
     goHome(){
       this.$router.push({ path: '/home' });
+    },
+    login(){
+      this.$router.push({path:'/login'})
     }
   }
 }

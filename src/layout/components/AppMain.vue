@@ -1,7 +1,7 @@
 <template>
 <div class="main-container">
   <transition name="slide-fade" mode="out-in">
-  <router-view :key="key"></router-view>
+    <router-view></router-view>
   </transition>
 </div>
 </template>
@@ -13,9 +13,6 @@ export default {
     return{}
   },
   computed:{
-    key() {
-        return this.$route.path
-      }
   }
 }
 </script>
@@ -26,10 +23,12 @@ export default {
   width: 80vw;
   margin: 100px auto auto;
   position: relative;
-  font-size: 4.2vw;
-  font-weight: 700;
-  line-height: 2;
   }
+@media only screen and (max-width: 500px) {
+  .main-container{
+    margin-top: 0;
+  }
+}
 .slide-fade{
   position: absolute;left:0;right: 0;
 }
