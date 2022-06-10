@@ -1,6 +1,6 @@
 <template>
 <div class="menu">
-  猫咪正在睡觉Zzz
+  猫咪正在睡觉Zz~
 </div>
 </template>
 
