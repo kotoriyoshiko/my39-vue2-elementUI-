@@ -5,7 +5,7 @@
 
 .login-form{
   .label{
-    font-size: 1.3vw;
+    font-size: 130%;
     font-weight: 700;
   }
   .el-input__inner{
@@ -19,24 +19,36 @@
   .el-input__inner:focus{
     border-color:#eb008b ;
   }
+  .el-form-item__error{
+    width: 100%;
+    background-color: #f56c6c;
+    color: white;
+    height: 25px;
+    padding-left: 10px;
+  }
   .login-button{
     margin-top: 30px;
     color: #1a3aff;
     width: 6vw;
-    font-size: 2.1vw;
+    font-size: 200%;
     font-weight: 700;
     border-bottom: 5px solid #1a3aff;
+  }
+  @media only screen and (max-width: 500px) {
+    .login-button{
+      width: 20vw;
+    }
   }
   .login-button:hover{
     color: #eb008b;
     border-bottom: 5px solid #eb008b;
   }
   .register1{
-    font-size: 1.2vw;
+    font-size: 120%;
     font-weight: 550;
   }
   .register2{
-    font-size: 1.4vw;
+    font-size: 130%;
     font-weight: 700;
   }
   .register2:hover{

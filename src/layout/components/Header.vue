@@ -25,16 +25,16 @@
         <span>Language</span>
         </el-link>
       </div>
-      <div class="search nav">
-        <el-link>
-        <i class="fa fa-search" aria-hidden="true"></i>
-        <span>Search</span>
-        </el-link>
-      </div>
       <div class="menu nav">
         <el-link @click="menu">
         <i class="fa fa-bars" aria-hidden="true"></i>
         <span>Menu</span>
+        </el-link>
+      </div>
+      <div class="search nav">
+        <el-link>
+          <i class="fa fa-search" aria-hidden="true"></i>
+          <span>Search</span>
         </el-link>
       </div>
     </div>

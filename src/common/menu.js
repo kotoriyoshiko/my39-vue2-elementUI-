@@ -34,15 +34,6 @@ const router_config=[
                 }
             },
             {
-                path: 'menu',
-                component: menus,
-                name: 'menu',
-                meta: {
-                    layout: 'app-main',
-                    auth: false,
-                },
-            },
-            {
                 path: '/forgetpwd',
                 name: 'forget_pwd',
                 component: loadView('forget_pwd'),
@@ -65,6 +56,10 @@ const router_config=[
     {
         path: '/login',
         component:login
+    },
+    {
+        path: '/menu',
+        component: menus
     }
 ]
 

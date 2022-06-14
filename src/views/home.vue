@@ -6,19 +6,20 @@
     <img class="bg-img" src="@/assets/intro.png">
     <div class="cat-info">
       <div class="cat-text">
-        <h1>Solutions</h1>
-        <span>Delivering solutions that sets you apart from your competition and closer to your clients.</span>
+        <h1>i like my cats！</h1>
+        <span>Copywriting to be finalized.</span>
       </div>
       <div class="cat-text">
-        <h1>Services</h1>
-        <span>Unleash your full business potential with services in business, design, development and technology.</span>
+        <h1>私は猫が好きです♥</h1>
+        <span>コピーライターは未定です.</span>
       </div>
       <div class="cat-text">
-        <h1>Industries</h1>
-        <span>Set the standards of your industry by integrating technology into your operations.</span>
+        <h1>我喜欢我的猫咪。</h1>
+        <span>文案待定。</span>
       </div>
     </div>
-    <div style="height:450px"></div>
+    <div style="height:450px">
+    </div>
   </div>
 </template>
 
@@ -67,6 +68,14 @@ export default {
       min-width: 50%;
       margin-top: 0;
     }
+  }
+}
+.my-cat{
+  h1{
+    font-size: 4.2vw;
+    font-weight: 700;
+    line-height: 2;
+    padding-top: 100px;
   }
 }
 
